@@ -1,0 +1,19 @@
+body{
+    font-family: sans-serif;
+}
+.second{
+    background: pink;
+}
+
+.third{
+    background: lightblue;
+}
+.fourth{
+    background: lightgreen !important;
+}
+.quest-card{
+    border-radius: 16px;
+}
+.btn-quest:hover{
+    transform: translate(-1px);
+}
