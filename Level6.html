@@ -25,19 +25,15 @@
                             <button class="btn btn-danger flex-fill doorBtn" data-door="3">
                                 <i class="bi bi-door-open"></i>Door 3</button>
                         </div>
-                        <div id="result" class="alert alert-secondary mt-3 mb-0"> Choose a door to see the result.</div>
+                        <div id="resultDR" class="alert alert-secondary mt-3 mb-0"> Choose a door to see the result.</div>
                         <hr>
                         <div class="d-flex gap-2">
-                            <button class="btn btn-secondary w-50" onclick="window.location.href='Level5.html'">
-                                <i class="bi bi-arrow-left">
-                                    "Back"
-                                </i>
-                            </button>
-                             <button class="btn btn-dark w-50" onclick="window.location.href='Level1.html'">
-                                <i class="bi bi-arrow-clockwise">
-                                    "Restart (Level 1)"
-                                </i>
-                            </button>
+                           <button class="btn btn-secondary w-50" onclick="window.location.href='Level5.html'">
+                              <i class="bi bi-arrow-left"></i> Back
+                           </button>
+                           <button class="btn btn-dark w-50" onclick="window.location.href='Level1.html'">
+                              <i class="bi bi-arrow-clockwise"></i> Restart (Level 1)
+                           </button>
                         </div>
                     </div>
                 </div>
@@ -46,6 +42,26 @@
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="JSWebDev.js" defer></script>
+    <script> 
+        const winningDoor = 3;
+        const resultDR = document.getElementById("resultDR");
+        const doorBtns = document.querySelectorAll(".doorBtn");
+
+        doorBtns.forEach((btn) => {
+        btn.addEventListener("click", function () {
+        const picked = Number(btn.dataset.door);
+
+        if (picked === winningDoor) {
+         resultDR.className = "alert alert-success mt-3 mb-0";
+         resultDR.innerHTML =
+        '<i class="bi bi-trophy-fill me-2"></i> Correct! Quest Complete <i class="bi bi-check-circle-fill"></i>';
+        } else {
+         resultDR.className = "alert alert-danger mt-3 mb-0";
+         resultDR.innerHTML =
+        '<i class="bi bi-x-circle-fill me-2"></i> Wrong door. Try again!';
+    }
+    });
+    });
+    </script>
 </body>
 </html>
