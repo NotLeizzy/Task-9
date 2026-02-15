@@ -11,6 +11,12 @@ body{
 .fourth{
     background: lightgreen !important;
 }
+.fifth{
+    background: lightyellow;
+}
+.sixth{
+    background: lightgray;
+}
 .quest-card{
     border-radius: 16px;
 }

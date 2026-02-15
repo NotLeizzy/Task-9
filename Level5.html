@@ -8,39 +8,39 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="CSSstyling.css">
 </head>
-<body class="fourth">
+<body class="fifth">
     <div class="container py-5">
         <div class="row justify-content-center">
             <div class="col-12 col-md-8 col-lg-6">
                 <div class="card shadow">
                     <div class="card-body">
-                        <span id="badge" class="badge text-bg-primary">
-                            "Level 4"
-                        </span>
-                        <h2 class="h4 fw-bold mt-2"> Form Validation</h2>
-                        <p class="text-muted">Enter a name. Empty = error, filled = success!
-                        </p>
-                        <label for="heroName" class="form-label">Hero Name:</label>
-                        <input id="heroName" type="text" class="form-control" placeholder="Type your name">
-                           <button id="submitBtn" class="btn btn-primary w-100 mt-2"> Submit Name</button>
-                           <p id="result" class="mt-3 mb-0"></p>
-                           <hr>
-                            <div class="d-flex gap-2">
-                                <button class="btn btn-secondary w-50" onclick="window.location.href = 'Level3.html'">
-                                <i class="bi bi-arrow-left"></i> "Back"
-                                </button>
-                              <button class="btn btn-dark btn-quest w-50" onclick="window.location.href = 'Level5.html'">
-                                "Next Level"
-                                <i class="bi bi-arrow-right"></i>
-                              </button>
+                        <span id="badge" class="badge text-bg-primary">Level 5</span>
+                        <h2 class="h4 fw-bold mt-2"> Counter:Coins</h2>
+                        <p class="text-muted">Use + and - buttons. Coins cannot  go below 0. </p>
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <button id="minusBtn" class="btn btn-outline-secondary">-1</button>
+                            <div class="fw-bold fs-5">"Coins:"
+                                <span id="coins">0</span>
                             </div>
+                            <button id="plusBtn" class="btn btn-outline-secondary">+1</button>
+                        </div>
+                        <p id="coinMsg" class="small text-muted mb-0">
+                            "Keep clicking and take a screenshot when coins changed!"
+                        </p>
+                        <hr>
+                        <div class="d-flex gap-2">
+                            <button class="btn btn-secondary w-50" onclick="window.location.href='Level4.html'">
+                                Back</button>
+                            <button class=" btn btn-dark w-50" onclick="window.location.href='Level6.html'">
+                                Next Level</button>
+                        </div>
                     </div>
                 </div>
-                <p class="text-center text-muted small mt-3 mb-0">Screenshot #4</p>
+                <p class="text-center text-muted small mt-3 mb-0">Screenshot #5(Coins changed value)</p>
             </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="JSWebDev.js" defer></script>
-</body5
+</body>
 </html>
