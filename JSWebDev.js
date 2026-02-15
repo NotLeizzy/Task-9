@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-//JS for L4
+//JS for L3
 let currentLevel = 1;
 
 const badge = document.getElementById("badge");
@@ -19,7 +19,7 @@ const levelUpBtn = document.getElementById("levelUpBtn");
     });
   }
 
-//JS for L5
+//JS for L4
  const heroName = document.getElementById("heroName");
   const submitBtn = document.getElementById("submitBtn");
   const result = document.getElementById("result");
@@ -38,7 +38,7 @@ const levelUpBtn = document.getElementById("levelUpBtn");
     });
   }
 
-  //JS for L6
+  //JS for L5
  let coins = 0;
 
 const coinsSpan = document.getElementById("coins");
@@ -55,5 +55,26 @@ minusBtn.addEventListener("click", function () {
     coins--;
     coinsSpan.textContent = coins;
   }
+});
+
+//JS FOR L6
+const winningDoor = 2;
+const resultDR = document.getElementById("result");
+const doorBtns = document.querySelectorAll(".doorBtn");
+
+doorBtns.forEach((btn) => {
+  btn.addEventListener("click", function () {
+    const picked = Number(btn.dataset.door);
+
+    if (picked === winningDoor) {
+      resultDR.className = "alert alert-success mt-3 mb-0";
+      resultDR.innerHTML =
+        '<i class="bi bi-trophy-fill me-2"></i> Correct! Quest Complete <i class="bi bi-check-circle-fill"></i>';
+    } else {
+      resultDR.className = "alert alert-danger mt-3 mb-0";
+      resultDR.innerHTML =
+        '<i class="bi bi-x-circle-fill me-2"></i> Wrong door. Try again!';
+    }
+  });
 });
 });
